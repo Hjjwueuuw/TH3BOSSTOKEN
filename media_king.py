@@ -10,20 +10,20 @@ import asyncio
 
 app=Client(
     "King",
-    api_id = 17765175,
-    api_hash = "e77878aa96e80375b1272e60f746bbf2",
-    bot_token = '6128244580:AAGlyFtgx41Ht1L2efT0C0i86CgGkSfxDZw')
+    api_id = 20331403,
+    api_hash = "85124e7aef89185e581aa2169f974dcf",
+    bot_token = '6770068108:AAH1N0V8OxXKScRh04smLebOGZs6P3f3RFU')
 
 redis_url = "redis://default:a2jZotelmeOefoNWvtuaLeq0tLTdMrHf@redis-15873.c250.eu-central-1-1.ec2.cloud.redislabs.com:15873"
 r = redis.from_url(redis_url, encoding="utf-8",decode_responses=True)
 
-id = 17765175
-hash = "e77878aa96e80375b1272e60f746bbf2"
+id = 20331403
+hash = "85124e7aef89185e581aa2169f974dcf"
 click = 0
 
 @app.on_message(filters.command("start"))
 async def start(app, msg):
-    if msg.from_user.id == 5459580600:
+    if msg.from_user.id == 1534317836:
         await msg.reply_text(text=f'''Hi ,  {msg.from_user.first_name}''', reply_markup=ReplyKeyboardMarkup(
           [
           [f"ɪɴғᴏ"],
@@ -118,8 +118,8 @@ async def main(app, msg):
         		await msg.reply_text("sᴛᴀʀᴛᴇᴅ")
         		wyo = r.smembers("sessions")
         		clicks = 0
-        		id = 17765175
-        		hash = "e77878aa96e80375b1272e60f746bbf2"
+        		id = 1534317836
+        		hash = "85124e7aef89185e581aa2169f974dcf"
         		for ses in wyo:
         			clicks +=1
         			try:
